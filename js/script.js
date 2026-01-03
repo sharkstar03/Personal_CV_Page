@@ -267,4 +267,46 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- Image Modal Logic (Certificates) ---
+    const imageModal = document.getElementById('image-modal');
+    const modalImageDisplay = document.getElementById('modal-image-display');
+    const closeImageModalBtn = document.querySelector('.image-modal-close');
+    const openCertBtns = document.querySelectorAll('.open-cert-modal');
+
+    if (imageModal && modalImageDisplay) {
+        const closeImageModal = () => {
+            imageModal.classList.remove('active');
+            setTimeout(() => {
+                modalImageDisplay.src = ''; // Clear src after closing
+            }, 300);
+        };
+
+        openCertBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const imagePath = btn.getAttribute('data-image');
+                if (imagePath) {
+                    modalImageDisplay.src = imagePath;
+                    imageModal.classList.add('active');
+                }
+            });
+        });
+
+        if (closeImageModalBtn) {
+            closeImageModalBtn.addEventListener('click', closeImageModal);
+        }
+
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal) {
+                closeImageModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && imageModal.classList.contains('active')) {
+                closeImageModal();
+            }
+        });
+    }
 });
