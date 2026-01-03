@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edgar Ng | Perfil Tecnológico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <!-- Pantalla de Carga (Intro Animation 3D Fullscreen) -->
+    <div id="intro-loader">
+        <div class="cyber-grid"></div>
+        <div class="scanline"></div>
+        <div class="loader-content">
+            <div class="cube-wrapper">
+                <div class="cube-loader">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                    <div class="server-rack">
+                        <div class="rack-light"></div>
+                        <div class="rack-light"></div>
+                        <div class="rack-light"></div>
+                    </div>
+                </div>
+                <div class="cube-shadow"></div>
+            </div>
+            
+            <div class="text-wrapper">
+                <div class="loader-glitch" data-text="SYSTEM_BOOT">SYSTEM_BOOT</div>
+                <div class="status-text">INITIALIZING CORE PROTOCOLS...</div>
+            </div>
+
+            <div class="loader-bar-container">
+                <div class="loader-bar">
+                    <div class="loader-progress"></div>
+                </div>
+                <div class="progress-percent">0%</div>
+            </div>
+            
+            <div class="loading-steps">
+                <span class="step" style="--d:1">>> Cargando módulos de red...</span>
+                <span class="step" style="--d:2">>> Verificando integridad de datos...</span>
+                <span class="step" style="--d:3">>> Accediendo a perfil de usuario...</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="cursor-follower"></div>
+    <canvas id="bg-canvas"></canvas> <!-- Canvas para partículas -->
+    <div class="bg-gradient"></div>
+
+    <div class="main-layout">
+        <!-- Columna Izquierda: Tarjeta de Perfil Fija -->
+        <aside class="profile-sidebar">
+            <div class="profile-card glass-panel"> <!-- Se eliminó data-tilt -->
+                <div class="profile-header">
+                    <!-- Foto de Perfil Restaurada -->
+                    <div class="avatar-container">
+                        <img src="assets/profile.jpg" alt="Edgar Ng" class="avatar">
+                        <div class="status-indicator"></div>
+                    </div>
+
+                    <h1 class="glitch-text" data-text="EDGAR NG">EDGAR NG</h1>
+                    <span class="role-badge">Founder & CEO @ QUANTIUM CREW</span>
+                    <span class="role-badge-secondary">IT Senior @ Farmacia Saba</span>
+                    
+                    <div class="profile-contact-info">
+                        <p><i data-feather="map-pin"></i> Panamá</p>
+                        <!-- Correo y Teléfono eliminados de aquí por privacidad/limpieza -->
+                    </div>
+
+                    <p class="profile-bio">
+                        Liderando la innovación como Founder de mi propia Startup <strong>QUANTIUM CREW</strong>, mientras gestiono la infraestructura crítica de <strong>Farmacia Saba</strong> como IT Senior. 
+                        Combino visión empresarial con ejecución técnica de alto nivel.
+                    </p>
+                </div>
+
+                <div class="profile-actions">
+                    <button id="open-contact-btn" class="btn-primary w-full">
+                        <i data-feather="message-circle"></i> Hablemos
+                    </button>
+                    <a href="#" class="btn-secondary w-full" id="download-cv-btn">
+                        <i data-feather="download"></i> Descargar CV
+                    </a>
+                </div>
+
+    <!-- Modal de Contacto Cyberpunk -->
+    <div id="contact-modal" class="modal-overlay">
+        <div class="modal-container glass-panel">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <h2 class="glitch-text" data-text="ESTABLECER_CONEXION">ESTABLECER_CONEXION</h2>
+                <div class="modal-status">
+                    <span class="status-dot"></span> SYSTEM_READY
+                </div>
+            </div>
+            
+            <div class="modal-body">
+                <p class="terminal-text">> Seleccione protocolo de comunicación:</p>
+                
+                <div class="contact-options">
+                    <a href="https://wa.me/50761351747" target="_blank" class="contact-card whatsapp">
+                        <div class="icon-box"><i data-feather="message-square"></i></div>
+                        <div class="info-box">
+                            <h3>WhatsApp</h3>
+                            <span>Chat Directo / Rápido</span>
+                        </div>
+                        <div class="arrow">→</div>
+                    </a>
+
+                    <a href="mailto:mr_ng03@hotmail.com" class="contact-card email">
+                        <div class="icon-box"><i data-feather="mail"></i></div>
+                        <div class="info-box">
+                            <h3>Correo Electrónico</h3>
+                            <span>mr_ng03@hotmail.com</span>
+                        </div>
+                        <div class="arrow">→</div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/edgar-ng-sharkstar03" target="_blank" class="contact-card linkedin">
+                        <div class="icon-box"><i data-feather="linkedin"></i></div>
+                        <div class="info-box">
+                            <h3>LinkedIn</h3>
+                            <span>Perfil Profesional</span>
+                        </div>
+                        <div class="arrow">→</div>
+                    </a>
+                </div>
+
+                <div class="terminal-footer">
+                    <span class="cursor-blink">>_</span> Esperando input del usuario...
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <div class="social-links-row">
+                    <a href="https://github.com/sharkstar03" target="_blank" class="social-icon" title="GitHub"><i data-feather="github"></i></a>
+                    <a href="https://www.linkedin.com/in/edgar-ng-sharkstar03" target="_blank" class="social-icon" title="LinkedIn"><i data-feather="linkedin"></i></a>
+                    <a href="https://x.com/EdgarNg_Shark" target="_blank" class="social-icon" title="X">
+                        <!-- Logo X (Twitter) SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/its_shark03/" target="_blank" class="social-icon" title="Instagram"><i data-feather="instagram"></i></a>
+                </div>
+            </div>
+
+                    <!-- Tech Stack Mini Widget (Actualizado con GitHub Info) -->
+                    <div class="tech-widget glass-panel">
+                        <h3>Stack Tecnológico</h3>
+                        <div class="tech-tags">
+                            <!-- Frontend -->
+                            <span>React</span>
+                            <span>Vue.js</span>
+                            <span>JavaScript</span>
+                            <span>HTML5/CSS3</span>
+                            
+                            <!-- Backend -->
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>FastAPI</span>
+                            <span>PHP</span>
+
+                            <!-- DevOps -->
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>AWS</span>
+                            <span>Azure</span>
+                            <span>Google Cloud</span>
+                            <span>Terraform</span>
+
+                            <!-- DB & Others -->
+                            <span>MongoDB</span>
+                            <span>PostgreSQL</span>
+                            <span>SQL Server</span>
+                            <span>Redis</span>
+                            <span>Git/GitHub</span>
+                        </div>
+                        
+                        <h3 style="margin-top: 15px; font-size: 0.9rem; color: var(--accent-purple);">Aprendiendo</h3>
+                        <div class="tech-tags">
+                            <span>Rust</span>
+                            <span>GraphQL</span>
+                            <span>NestJS</span>
+                        </div>
+                    </div>
+        </aside>
+
+        <!-- Columna Derecha: Contenido Scrolleable -->
+        <main class="content-area">
+            
+            <!-- Navegación simple estilo pestañas -->
+            <nav class="content-nav glass-panel">
+                <a href="#about" class="nav-item active">Perfil</a>
+                <a href="#experience" class="nav-item">Experiencia</a>
+                <a href="#skills" class="nav-item">Habilidades</a>
+                <a href="#projects" class="nav-item">Proyectos</a>
+            </nav>
+
+            <section id="about" class="content-section fade-in">
+                <div class="glass-panel">
+                    <h2 class="section-title"><i data-feather="user"></i> Perfil Profesional</h2>
+                    <div class="bio-content">
+                    <p>
+                        Mi perfil es híbrido: soy el <strong>Founder de QUANTIUM CREW</strong>, una Tech Startup emergente, y simultáneamente me desempeño como <strong>IT Senior en Farmacia Saba</strong>. 
+                        Esta dualidad me permite tener la agilidad de un emprendedor y la solidez operativa de un gestor corporativo.
+                    </p>
+                    <p>
+                        En mi startup construyo el futuro con desarrollo web y soluciones innovadoras, mientras que en mi rol senior garantizo la estabilidad de infraestructuras críticas para +48 sucursales.
+                    </p>
+                    
+                    <!-- Stats Grid Restaurado -->
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">48+</span>
+                            <span class="stat-label">Sucursales (Saba)</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">+4</span>
+                            <span class="stat-label">Años Exp. Técnica</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">Founder</span>
+                            <span class="stat-label">Quantium Crew</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- Nueva Sección: Experiencia Laboral -->
+            <section id="experience" class="content-section fade-in">
+                <h2 class="section-header">Experiencia Laboral</h2>
+                <div class="timeline">
+                    <!-- Quantium Crew (Nuevo) -->
+                    <div class="timeline-item glass-panel" style="border-left: 4px solid var(--accent-cyan);">
+                        <div class="timeline-date">2024 - Presente</div>
+                        <div class="timeline-content">
+                            <h3>Founder & CEO</h3>
+                            <span class="institution">Quantium Crew (Tech Startup)</span>
+                            <ul class="skill-list">
+                                <li>Fundación y dirección estratégica de startup tecnológica enfocada en soluciones digitales.</li>
+                                <li>Liderazgo en el desarrollo de plataformas web personalizadas y software a medida.</li>
+                                <li>Gestión de servicios de soporte IT corporativo y venta de hardware especializado.</li>
+                                <li>Creación de alianzas comerciales y expansión de cartera de clientes.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Allqui.app -->
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <div class="timeline-content">
+                            <h3>
+                                <a href="https://allqui.app/home.php" target="_blank" class="timeline-link" title="Visitar Allqui.app">
+                                    Backend & Frontend Developer <i data-feather="external-link" style="width: 14px; height: 14px; vertical-align: middle;"></i>
+                                </a>
+                            </h3>
+                            <span class="institution">Allqui.app</span>
+                            <ul class="skill-list">
+                                <li>Desarrollé arquitectura de microservicios con Node.js y Express (Mejora 60% tiempos respuesta).</li>
+                                <li>Implementé sistema de autenticación OAuth2 y JWT para APIs RESTful.</li>
+                                <li>Creé dashboards administrativos y paneles de cliente usando React y Vue.js.</li>
+                                <li>Configuración de pipelines CI/CD con GitHub Actions para despliegues automatizados.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- IT Senior (Farmacia Saba) - Actualizado con logros de GitHub -->
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-date">2021 - Presente</div>
+                        <div class="timeline-content">
+                            <h3>IT Director & Senior</h3>
+                            <span class="institution">Farmacia Saba</span>
+                            <ul class="skill-list">
+                                <li>Liderazgo en la transformación digital, migrando sistemas locales a la nube (Azure).</li>
+                                <li>Diseño e implementación de arquitectura de red segura con firewalls Fortinet y Cisco.</li>
+                                <li>Desarrollo de sistema de gestión de inventario y ventas a medida (Python/Django + SQL Server).</li>
+                                <li>Supervisión de equipo técnico para soporte y mantenimiento en 48+ sucursales.</li>
+                                <li>Monitoreo de infraestructura en tiempo real y gestión de seguridad.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Agente de Renta -->
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-date">2024 - 2025</div>
+                        <div class="timeline-content">
+                            <h3>
+                                <a href="https://crs.com.pa/" target="_blank" class="timeline-link" title="Visitar CRS Group">
+                                    Agente de Renta <i data-feather="external-link" style="width: 14px; height: 14px; vertical-align: middle;"></i>
+                                </a>
+                            </h3>
+                            <span class="institution">CRS Group (Thrifty, Hertz, Dollar, Firefly)</span>
+                            <ul class="skill-list">
+                                <li>Gestión de reservas y atención a clientes corporativos.</li>
+                                <li>Manejo de sistemas de facturación y control de inventario.</li>
+                                <li>Resolución de problemas complejos y coordinación interdepartamental.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Auxiliar Soporte -->
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-date">2021 - 2023</div>
+                        <div class="timeline-content">
+                            <h3>Auxiliar de Soporte IT</h3>
+                            <span class="institution">Farmacia Saba</span>
+                            <ul class="skill-list">
+                                <li>Instalación y configuración de sistemas en 20 farmacias.</li>
+                                <li>Configuración de redes, firewalls y servidores virtuales.</li>
+                                <li>Soporte remoto (Anydesk, TeamViewer) y presencial.</li>
+                                <li>Instalación de CCTV y telefonía IP.</li>
+                                <li>Manejo de SQL Express y sistema LDCOM.</li>
+                                <li>Capacitación interna y creación de documentación técnica.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="content-section fade-in">
+                <h2 class="section-header">Áreas de Especialización</h2>
+                
+                <!-- Barras de Progreso Detalladas -->
+                <div class="glass-panel mb-30">
+                    <h3 class="subsection-title">Niveles de Competencia</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar-container">
+                            <div class="skill-info">
+                                <span>Infraestructura & Hardware</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-info">
+                                <span>Redes & Comunicaciones (Cisco/Mikrotik)</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar-container">
+                            <div class="skill-info">
+                                <span>Desarrollo de Software (Frontend/Backend)</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                         <div class="skill-bar-container">
+                            <div class="skill-info">
+                                <span>Soporte Técnico & Troubleshooting</span>
+                                <span>98%</span>
+                            </div>
+                            <div class="progress-bg">
+                                <div class="progress-fill" style="width: 98%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projects-grid-compact">
+                    <!-- Skill Card 1 -->
+                    <div class="project-card-compact glass-panel">
+                        <div class="project-icon">
+                            <i data-feather="code"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Programación & Desarrollo</h3>
+                            <ul class="skill-list">
+                                <li>Desarrollo frontend con React</li>
+                                <li>Creación de sistemas internos y dashboards</li>
+                                <li>Integración y consumo de APIs</li>
+                                <li>Automatización básica de procesos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 2 -->
+                    <div class="project-card-compact glass-panel">
+                        <div class="project-icon">
+                            <i data-feather="wifi"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Redes & Comunicaciones</h3>
+                            <ul class="skill-list">
+                                <li>Diseño e implementación LAN/WAN</li>
+                                <li>Configuración Cisco y MikroTik</li>
+                                <li>Segmentación y seguridad básica</li>
+                                <li>Diagnóstico y troubleshooting avanzado</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 3 -->
+                     <div class="project-card-compact glass-panel">
+                        <div class="project-icon">
+                            <i data-feather="database"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Gestión & Herramientas</h3>
+                            <ul class="skill-list">
+                                <li>Liderazgo de equipos y gestión de proyectos</li>
+                                <li>LDCOM, SAP (Básico), SQL Express</li>
+                                <li>Gestión de proveedores y contratos</li>
+                                <li>Documentación técnica y manuales</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Skill Card 4 -->
+                    <div class="project-card-compact glass-panel">
+                        <div class="project-icon">
+                            <i data-feather="server"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Sistemas Operativos</h3>
+                            <ul class="skill-list">
+                                <li>Administración de Windows y Linux</li>
+                                <li>Instalación y optimización de sistemas</li>
+                                <li>Virtualización (VMware / VirtualBox)</li>
+                                <li>Gestión de servidores (NAS, Ubuntu, Windows)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="content-section fade-in">
+                <h2 class="section-header">Proyectos Destacados</h2>
+                <div class="projects-grid-compact">
+                    <!-- Project Card 1: CloudSecOps -->
+                    <div class="project-card-compact glass-panel">
+                        <div class="project-icon">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>CloudSecOps Platform</h3>
+                            <p>Plataforma de seguridad cloud con monitoreo continuo AWS/Azure y alertas en tiempo real.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Terraform</span>
+                                <span>React</span>
+                                <span>AWS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: API Microservices -->
+                    <div class="project-card-compact glass-panel">
+                        <div class="project-icon">
+                            <i data-feather="grid"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>API Microservices Arch</h3>
+                            <p>Arquitectura de microservicios con Gateway centralizado, RabbitMQ y Swagger.</p>
+                            <div class="project-tags">
+                                <span>Node.js</span>
+                                <span>Docker</span>
+                                <span>K8s</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3: DevOps Toolkit -->
+                    <div class="project-card-compact glass-panel">
+                        <div class="project-icon">
+                            <i data-feather="settings"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>DevOps Automation Toolkit</h3>
+                            <p>Herramientas CI/CD para pipelines configurables y monitoreo con Prometheus/Grafana.</p>
+                            <div class="project-tags">
+                                <span>GitHub Actions</span>
+                                <span>Terraform</span>
+                                <span>Ansible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4: Dashboard Monitoreo (Original) -->
+                    <div class="project-card-compact glass-panel">
+                        <div class="project-icon">
+                            <i data-feather="activity"></i>
+                        </div>
+                        <div class="project-info">
+                            <h3>Dashboard de Monitoreo</h3>
+                            <p>Visualización de métricas clave y tráfico de red para entornos internos.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Network</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Nueva Sección: Servicios e Idiomas -->
+            <section id="services" class="content-section fade-in">
+                <div class="glass-panel">
+                    <h2 class="section-title"><i data-feather="briefcase"></i> Competencias & Idiomas</h2>
+                    <div class="services-grid">
+                        <div class="service-col">
+                            <h3><i data-feather="check-circle"></i> Competencias Clave</h3>
+                            <ul class="service-list">
+                                <li>Resolución de problemas complejos</li>
+                                <li>Pensamiento lógico y analítico</li>
+                                <li>Programación empírica orientada a soluciones</li>
+                                <li>Gestión e implementación Open Source</li>
+                                <li>Adaptabilidad tecnológica</li>
+                                <li>Aprendizaje autodidacta</li>
+                            </ul>
+                        </div>
+                        <div class="service-col">
+                            <h3><i data-feather="globe"></i> Idiomas</h3>
+                            <div class="language-item">
+                                <span class="lang-name">Español</span>
+                                <span class="lang-level">Nativo</span>
+                                <div class="progress-bg"><div class="progress-fill" style="width: 100%"></div></div>
+                            </div>
+                            <div class="language-item">
+                                <span class="lang-name">Inglés</span>
+                                <span class="lang-level">Profesional</span>
+                                <div class="progress-bg"><div class="progress-fill" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certificates" class="content-section fade-in">
+                <h2 class="section-header">Educación & Certificaciones</h2>
+                <div class="timeline">
+                    <!-- Técnico Superior -->
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3>Técnico Superior en Informática (Énfasis en Redes y Software)</h3>
+                            <span class="institution">Centro Superior Cultural & Turismo</span>
+                            <p>Graduación: Mayo 2023</p>
+                        </div>
+                    </div>
+
+                    <!-- Bachiller -->
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-date">2016 - 2020</div>
+                        <div class="timeline-content">
+                            <h3>Bachiller en Ciencias (Énfasis en Redes Informática)</h3>
+                            <span class="institution">Canadian International School</span>
+                        </div>
+                    </div>
+
+                    <!-- Certificaciones -->
+                    <div class="timeline-item glass-panel">
+                        <div class="timeline-date">Continua</div>
+                        <div class="timeline-content">
+                            <h3>Formación Complementaria</h3>
+                            <ul class="skill-list" style="margin-top: 10px;">
+                                <li>Certificaciones en Programación y Desarrollo Web</li>
+                                <li>Certificaciones en Redes y Networking</li>
+                                <li>Certificaciones en Soporte Técnico y Hardware</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Nueva Sección: Referencias Laborales -->
+            <section id="references" class="content-section fade-in">
+                <div class="glass-panel">
+                    <h2 class="section-title"><i data-feather="users"></i> Referencias Laborales</h2>
+                    <div class="references-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <div class="ref-card" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;">
+                            <h3 style="font-size: 1.1rem; color: var(--accent-cyan);">Rodolfo Arias</h3>
+                            <p style="font-size: 0.9rem; margin-bottom: 5px;">Farmacia Saba</p>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">+506 8897-1117</p>
+                        </div>
+                        <div class="ref-card" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;">
+                            <h3 style="font-size: 1.1rem; color: var(--accent-cyan);">Lineth Angulo</h3>
+                            <p style="font-size: 0.9rem; margin-bottom: 5px;">CRS Group</p>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">+507 6558-1166</p>
+                        </div>
+                        <div class="ref-card" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;">
+                            <h3 style="font-size: 1.1rem; color: var(--accent-cyan);">Yasser Zapateiro</h3>
+                            <p style="font-size: 0.9rem; margin-bottom: 5px;">Referencia Personal</p>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">+507 6135-1747</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
