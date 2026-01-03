@@ -1017,10 +1017,26 @@ body {
 
 .project-tags {
     display: flex;
-    gap: 10px;
-    font-size: 0.8rem;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.project-tags span {
     font-family: var(--font-mono);
-    color: var(--text-muted);
+    font-size: 0.75rem;
+    background: rgba(0, 242, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: var(--text-main);
+    border: 1px solid rgba(0, 242, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.project-tags span:hover {
+    background: rgba(0, 242, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 0 8px rgba(0, 242, 255, 0.2);
 }
 
 .project-link {
