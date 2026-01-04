@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const loader = document.getElementById('intro-loader');
     const loaderProgress = document.querySelector('.loader-progress');
     const percentDisplay = document.querySelector('.progress-percent');
+    const detailDisplay = document.querySelector('.progress-detail');
     
     if (loader && loaderProgress) {
         let progress = 0;
@@ -14,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 progress = 100;
                 clearInterval(interval);
                 
+                if (detailDisplay) detailDisplay.textContent = "ACCESS GRANTED";
+                
                 // Pequeña pausa al 100% para leer "SYSTEM READY"
                 setTimeout(() => {
                     loader.classList.add('loaded');
@@ -23,6 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
             loaderProgress.style.width = `${progress}%`;
             if (percentDisplay) {
                 percentDisplay.textContent = `${Math.floor(progress)}%`;
+            }
+            
+            if (detailDisplay && progress < 100) {
+                if (progress < 30) detailDisplay.textContent = "LOADING KERNEL...";
+                else if (progress < 50) detailDisplay.textContent = "VERIFYING BIOMETRICS...";
+                else if (progress < 70) detailDisplay.textContent = "ENCRYPTING CONNECTION...";
+                else if (progress < 90) detailDisplay.textContent = "ESTABLISHING UPLINK...";
+                else detailDisplay.textContent = "FINALIZING...";
             }
             
         }, 80); // Intervalo reducido de 150ms a 80ms para más fluidez

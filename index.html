@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edgar Ng | Profile</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/references.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
@@ -16,39 +17,25 @@
         <div class="cyber-grid"></div>
         <div class="scanline"></div>
         <div class="loader-content">
-            <div class="cube-wrapper">
-                <div class="cube-loader">
-                    <div class="cube-face front"></div>
-                    <div class="cube-face back"></div>
-                    <div class="cube-face right"></div>
-                    <div class="cube-face left"></div>
-                    <div class="cube-face top"></div>
-                    <div class="cube-face bottom"></div>
-                    <div class="server-rack">
-                        <div class="rack-light"></div>
-                        <div class="rack-light"></div>
-                        <div class="rack-light"></div>
-                    </div>
-                </div>
-                <div class="cube-shadow"></div>
+            <div class="reactor-loader">
+                <div class="reactor-ring ring-1"></div>
+                <div class="reactor-ring ring-2"></div>
+                <div class="reactor-ring ring-3"></div>
+                <div class="reactor-ring ring-4"></div>
+                <div class="reactor-core"></div>
             </div>
             
-            <div class="text-wrapper">
-                <div class="loader-glitch" data-text="SYSTEM_BOOT">SYSTEM_BOOT</div>
-                <div class="status-text">INITIALIZING CORE PROTOCOLS...</div>
-            </div>
-
+            <div class="loader-glitch" data-text="SYSTEM_BOOT">SYSTEM_BOOT</div>
+            <div class="status-text">INITIALIZING QUANTUM CORE...</div>
+            
             <div class="loader-bar-container">
-                <div class="loader-bar">
+                <div class="loader-bar-bg">
                     <div class="loader-progress"></div>
                 </div>
-                <div class="progress-percent">0%</div>
-            </div>
-            
-            <div class="loading-steps">
-                <span class="step" style="--d:1">>> Cargando módulos de red...</span>
-                <span class="step" style="--d:2">>> Verificando integridad de datos...</span>
-                <span class="step" style="--d:3">>> Accediendo a perfil de usuario...</span>
+                <div class="progress-stats">
+                    <span class="progress-percent">0%</span>
+                    <span class="progress-detail">LOADING ASSETS</span>
+                </div>
             </div>
         </div>
     </div>
@@ -116,7 +103,7 @@
                         <div class="arrow">→</div>
                     </a>
 
-                    <a href="mailto:mr_ng03@hotmail.com" class="contact-card email">
+                    <a href="mailto:mr_ng03@hotmail.com?subject=Contacto%20desde%20Portafolio&body=Hola%20Edgar..." class="contact-card email">
                         <div class="icon-box"><i data-feather="mail"></i></div>
                         <div class="info-box">
                             <h3>Correo Electrónico</h3>
@@ -244,6 +231,22 @@
             <section id="experience" class="content-section fade-in">
                 <h2 class="section-header">Experiencia Laboral</h2>
                 <div class="timeline">
+                    <!-- IT Senior & Encargado (Farmacia Saba) -->
+                    <div class="timeline-item glass-panel" style="border-left: 4px solid var(--accent-cyan);">
+                        <div class="timeline-date">2025 - Presente</div>
+                        <div class="timeline-content">
+                            <h3>IT Senior & Encargado</h3>
+                            <span class="institution">Farmacia Saba</span>
+                            <ul class="skill-list">
+                                <li>Liderazgo en la transformación digital, migrando sistemas locales a la nube (Azure).</li>
+                                <li>Diseño e implementación de arquitectura de red segura con firewalls Fortinet y Cisco.</li>
+                                <li>Desarrollo de sistema de gestión de inventario y ventas a medida (Python/Django + SQL Server).</li>
+                                <li>Supervisión de equipo técnico para soporte y mantenimiento en 48+ sucursales.</li>
+                                <li>Monitoreo de infraestructura en tiempo real y gestión de seguridad.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <!-- Quantium Crew (Nuevo) -->
                     <div class="timeline-item glass-panel" style="border-left: 4px solid var(--accent-cyan);">
                         <div class="timeline-date">2024 - Presente</div>
@@ -255,22 +258,6 @@
                                 <li>Liderazgo en el desarrollo de plataformas web personalizadas y software a medida.</li>
                                 <li>Gestión de servicios de soporte IT corporativo y venta de hardware especializado.</li>
                                 <li>Creación de alianzas comerciales y expansión de cartera de clientes.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- IT Senior & Encargado (Farmacia Saba) -->
-                    <div class="timeline-item glass-panel">
-                        <div class="timeline-date">2025 - Presente</div>
-                        <div class="timeline-content">
-                            <h3>IT Senior & Encargado</h3>
-                            <span class="institution">Farmacia Saba</span>
-                            <ul class="skill-list">
-                                <li>Liderazgo en la transformación digital, migrando sistemas locales a la nube (Azure).</li>
-                                <li>Diseño e implementación de arquitectura de red segura con firewalls Fortinet y Cisco.</li>
-                                <li>Desarrollo de sistema de gestión de inventario y ventas a medida (Python/Django + SQL Server).</li>
-                                <li>Supervisión de equipo técnico para soporte y mantenimiento en 48+ sucursales.</li>
-                                <li>Monitoreo de infraestructura en tiempo real y gestión de seguridad.</li>
                             </ul>
                         </div>
                     </div>
@@ -311,7 +298,7 @@
                             <span class="institution">CRS Group (Thrifty, Hertz, Dollar, Firefly)</span>
                             <ul class="skill-list">
                                 <li>Gestión de reservas y atención a clientes corporativos.</li>
-                                <li>Manejo de sistemas de facturación y control de inventario.</li>
+                                <li>Gestión integral en sistema Restrent: cotizaciones, renta de equipos y logística de distribución vehicular.</li>
                                 <li>Resolución de problemas complejos y coordinación interdepartamental.</li>
                             </ul>
                         </div>
@@ -576,7 +563,12 @@
                     <div class="timeline-item glass-panel">
                         <div class="timeline-date">2026</div>
                         <div class="timeline-content">
-                            <h3>Google IT Support Professional Certificate</h3>
+                            <h3>
+                                Google IT Support Professional Certificate
+                                <a href="#" class="cert-btn open-cert-modal" data-image="assets/IMG_1531.png" onclick="return false;">
+                                    <i data-feather="file-text"></i> Ver Certificado
+                                </a>
+                            </h3>
                             <span class="institution">Coursera</span>
                         </div>
                     </div>
@@ -614,22 +606,66 @@
             <section id="references" class="content-section fade-in">
                 <div class="glass-panel">
                     <h2 class="section-title"><i data-feather="users"></i> Referencias Laborales</h2>
-                    <div class="references-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                        <div class="ref-card" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;">
-                            <h3 style="font-size: 1.1rem; color: var(--accent-cyan);">Rodolfo Arias</h3>
-                            <p style="font-size: 0.9rem; margin-bottom: 5px;">Farmacia Saba</p>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">+506 8897-1117</p>
-                        </div>
-                        <div class="ref-card" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;">
-                            <h3 style="font-size: 1.1rem; color: var(--accent-cyan);">Lineth Angulo</h3>
-                            <p style="font-size: 0.9rem; margin-bottom: 5px;">CRS Group</p>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">+507 6558-1166</p>
-                        </div>
-                        <div class="ref-card" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 10px;">
-                            <h3 style="font-size: 1.1rem; color: var(--accent-cyan);">Yasser Zapateiro</h3>
-                            <p style="font-size: 0.9rem; margin-bottom: 5px;">Referencia Personal</p>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">+507 6135-1747</p>
-                        </div>
+                    <div class="references-grid">
+                        <!-- Rodolfo Arias -->
+                        <a href="https://wa.me/50688971117" target="_blank" class="ref-card glass-panel">
+                            <div class="ref-header">
+                                <div class="ref-info">
+                                    <h3>Rodolfo Arias</h3>
+                                    <span class="ref-role">Farmacia Saba</span>
+                                </div>
+                                <div class="ref-icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ref-number">
+                                <i data-feather="phone" style="width: 14px; height: 14px;"></i>
+                                +506 8897-1117
+                                <i data-feather="arrow-right" class="ref-arrow" style="width: 16px; height: 16px;"></i>
+                            </div>
+                        </a>
+
+                        <!-- Lineth Angulo -->
+                        <a href="https://wa.me/50765581166" target="_blank" class="ref-card glass-panel">
+                            <div class="ref-header">
+                                <div class="ref-info">
+                                    <h3>Lineth Angulo</h3>
+                                    <span class="ref-role">CRS Group</span>
+                                </div>
+                                <div class="ref-icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ref-number">
+                                <i data-feather="phone" style="width: 14px; height: 14px;"></i>
+                                +507 6558-1166
+                                <i data-feather="arrow-right" class="ref-arrow" style="width: 16px; height: 16px;"></i>
+                            </div>
+                        </a>
+
+                        <!-- Carmen Cardenas -->
+                        <a href="https://wa.me/50768469963" target="_blank" class="ref-card glass-panel">
+                            <div class="ref-header">
+                                <div class="ref-info">
+                                    <h3>Carmen Cardenas</h3>
+                                    <span class="ref-role">Referencia Personal</span>
+                                </div>
+                                <div class="ref-icon-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="ref-number">
+                                <i data-feather="phone" style="width: 14px; height: 14px;"></i>
+                                +507 6846-9963
+                                <i data-feather="arrow-right" class="ref-arrow" style="width: 16px; height: 16px;"></i>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
