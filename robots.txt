@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sharkstar03.github.io/Personal_CV_Page/sitemap.xml
