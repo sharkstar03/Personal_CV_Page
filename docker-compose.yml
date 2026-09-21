@@ -1,0 +1,10 @@
+name: cv
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    # Montado en solo lectura para ver los cambios sin reconstruir.
+    volumes:
+      - ./:/usr/share/nginx/html:ro
