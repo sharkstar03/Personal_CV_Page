@@ -1,688 +1,724 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edgar Ng | Profile</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/references.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/feather-icons"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#05070d" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
+
+<title>Edgar Ng · Agente de Soporte IT Senior y Desarrollador de Software</title>
+<meta name="description" content="Currículum de Edgar Alberto Ng Angulo: Agente de Soporte IT Senior en Farmacia Saba y fundador de Quantium Crew, S.A. Desarrollo web con TypeScript y React, apps nativas de Apple con Swift, backend en Node y Python. Panamá.">
+<meta name="author" content="Edgar Alberto Ng Angulo">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://sharkstar03.github.io/Personal_CV_Page/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Edgar Ng · CV">
+<meta property="og:locale" content="es_PA">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://sharkstar03.github.io/Personal_CV_Page/">
+<meta property="og:title" content="Edgar Ng · Agente de Soporte IT Senior y Desarrollador de Software">
+<meta property="og:description" content="Soporte IT senior en Panamá y fundador de Quantium Crew, S.A. TypeScript, React, Node, Python, Swift, PostgreSQL y Docker.">
+<meta property="og:image" content="https://sharkstar03.github.io/Personal_CV_Page/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tarjeta de presentación de Edgar Ng, Agente de Soporte IT Senior y desarrollador de software en Panamá.">
+<meta property="profile:first_name" content="Edgar">
+<meta property="profile:last_name" content="Ng Angulo">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@EdgarNg_Shark">
+<meta name="twitter:creator" content="@EdgarNg_Shark">
+<meta name="twitter:title" content="Edgar Ng · Agente de Soporte IT Senior y Desarrollador de Software">
+<meta name="twitter:description" content="Soporte IT senior en Panamá y fundador de Quantium Crew, S.A. TypeScript, React, Node, Python, Swift, PostgreSQL y Docker.">
+<meta name="twitter:image" content="https://sharkstar03.github.io/Personal_CV_Page/assets/og-image.png">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="assets/profile.webp" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+<link rel="stylesheet" href="css/style.css">
+
+<script>
+/* Aplica tema e idioma antes del primer pintado para evitar parpadeo. */
+(function () {
+  try {
+    var t = localStorage.getItem('cv-theme');
+    if (!t) t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    document.documentElement.dataset.theme = t;
+    var l = localStorage.getItem('cv-lang');
+    if (l === 'en') document.documentElement.lang = 'en';
+  } catch (e) {}
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Edgar Alberto Ng Angulo",
+  "alternateName": "Edgar Ng",
+  "givenName": "Edgar",
+  "familyName": "Ng Angulo",
+  "jobTitle": "Agente de Soporte IT Senior",
+  "description": "Agente de Soporte IT Senior en Farmacia Saba y fundador de Quantium Crew, S.A., empresa de desarrollo de software en Panamá.",
+  "url": "https://sharkstar03.github.io/Personal_CV_Page/",
+  "image": "https://sharkstar03.github.io/Personal_CV_Page/assets/profile.jpg",
+  "email": "mailto:sharkstar03@gmail.com",
+  "nationality": { "@type": "Country", "name": "Panamá" },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ciudad de Panamá",
+    "addressCountry": "PA"
+  },
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Farmacia Saba, S. A.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ciudad de Panamá",
+      "addressCountry": "PA"
+    }
+  },
+  "founder": {
+    "@type": "Organization",
+    "name": "Quantium Crew, S.A.",
+    "url": "https://github.com/QUANTIUM-CREW-S-A"
+  },
+  "knowsLanguage": [
+    { "@type": "Language", "name": "Español", "alternateName": "es" },
+    { "@type": "Language", "name": "Inglés", "alternateName": "en" }
+  ],
+  "knowsAbout": [
+    "Soporte técnico IT", "Redes LAN y VPN", "TypeScript", "React", "Next.js",
+    "Node.js", "Python", "PHP", "Laravel", "Swift", "SwiftUI",
+    "PostgreSQL", "Supabase", "Docker", "Linux"
+  ],
+  "alumniOf": [
+    {
+      "@type": "EducationalOrganization",
+      "name": "Centro Superior de Cultura y Turismo"
+    },
+    {
+      "@type": "EducationalOrganization",
+      "name": "Canadian International School"
+    }
+  ],
+  "sameAs": [
+    "https://github.com/sharkstar03",
+    "https://www.linkedin.com/in/edgar-ng-sharkstar03",
+    "https://x.com/EdgarNg_Shark",
+    "https://www.instagram.com/its_shark03/"
+  ]
+}
+</script>
 </head>
+
 <body>
-    <!-- Pantalla de Carga (Intro Animation 3D Fullscreen) -->
-    <div id="intro-loader">
-        <div class="cyber-grid"></div>
-        <div class="scanline"></div>
-        <div class="loader-content">
-            <div class="reactor-loader">
-                <div class="reactor-ring ring-1"></div>
-                <div class="reactor-ring ring-2"></div>
-                <div class="reactor-ring ring-3"></div>
-                <div class="reactor-ring ring-4"></div>
-                <div class="reactor-core"></div>
-            </div>
-            
-            <div class="loader-glitch" data-text="SYSTEM_BOOT">SYSTEM_BOOT</div>
-            <div class="status-text">INITIALIZING QUANTUM CORE...</div>
-            
-            <div class="loader-bar-container">
-                <div class="loader-bar-bg">
-                    <div class="loader-progress"></div>
-                </div>
-                <div class="progress-stats">
-                    <span class="progress-percent">0%</span>
-                    <span class="progress-detail">LOADING ASSETS</span>
-                </div>
-            </div>
+<a class="skip-link" href="#contenido" data-en="Skip to content">Saltar al contenido</a>
+
+<!-- Sprite de iconos. Sustituye la dependencia externa de Feather Icons. -->
+<svg class="visually-hidden" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <g id="i-pin" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></g>
+    <g id="i-mail" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="m22 6-10 7L2 6"/></g>
+    <g id="i-chat" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.5 8.5 0 0 1-4-1L3 21l2.1-5a8.4 8.4 0 0 1-1-4 8.4 8.4 0 0 1 8.4-9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></g>
+    <g id="i-download" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></g>
+    <g id="i-user" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></g>
+    <g id="i-briefcase" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></g>
+    <g id="i-layers" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 10 5-10 5L2 7l10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></g>
+    <g id="i-grid" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></g>
+    <g id="i-award" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="m8.2 13.3-1.5 8L12 18.5l5.3 2.8-1.5-8"/></g>
+    <g id="i-globe" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20Z"/></g>
+    <g id="i-link" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></g>
+    <g id="i-file" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></g>
+    <g id="i-sun" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g>
+    <g id="i-moon" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></g>
+    <g id="i-github" fill="currentColor" stroke="none"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.9 10.9c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.7 1.2 3.3.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .4.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></g>
+    <g id="i-linkedin" fill="currentColor" stroke="none"><path d="M20.4 3H3.6A.6.6 0 0 0 3 3.6v16.8a.6.6 0 0 0 .6.6h16.8a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 0-.6-.6ZM8.3 18.3h-2.7V9.8h2.7v8.5ZM7 8.6a1.6 1.6 0 1 1 0-3.1 1.6 1.6 0 0 1 0 3.1Zm11.4 9.7h-2.7v-4.1c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.2H9.9V9.8h2.6V11a2.9 2.9 0 0 1 2.6-1.4c2.8 0 3.3 1.8 3.3 4.2v4.5Z"/></g>
+    <g id="i-x" fill="currentColor" stroke="none"><path d="M18.9 1.2h3.7l-8 9.1L24 22.8h-7.4l-5.8-7.6-6.6 7.6H.5l8.6-9.8L0 1.2h7.6l5.2 6.9ZM17.6 20.6h2L6.5 3.3H4.3Z"/></g>
+    <g id="i-instagram" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></g>
+    <g id="i-whatsapp" fill="currentColor" stroke="none"><path d="M17.5 14.4c-.3-.2-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.3.2-.6.1-1.3-.5-2.4-1.5c-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1 2.9 1.2 3.1 2.1 3.2 5 4.5c1.9.8 2.7.9 3.6.8.6-.1 1.8-.7 2-1.4s.3-1.3.2-1.4-.3-.2-.5-.4M12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 1 1 12 21.8M12 0A12 12 0 0 0 1.6 17.9L0 24l6.3-1.7A12 12 0 1 0 12 0Z"/></g>
+    <g id="i-close" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m6 6 12 12M18 6 6 18"/></g>
+  </defs>
+</svg>
+
+<div class="backdrop" aria-hidden="true">
+  <canvas id="bg-canvas"></canvas>
+  <div class="backdrop-glow"></div>
+</div>
+
+<!-- Barra de herramientas: tema, idioma, impresión -->
+<div class="toolbar" role="toolbar" aria-label="Preferencias de la página" data-en-aria="Page preferences">
+  <button type="button" id="theme-toggle" class="tool-btn" aria-pressed="false"
+          aria-label="Cambiar a tema claro" data-en-aria="Switch to light theme"
+          title="Cambiar tema" data-en-title="Switch theme">
+    <svg class="ico ico-dark" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-moon"/></svg>
+    <svg class="ico ico-light" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-sun"/></svg>
+  </button>
+
+  <button type="button" id="lang-toggle" class="tool-btn tool-btn--text"
+          aria-label="Ver esta página en inglés" data-en-aria="View this page in Spanish"
+          title="Cambiar idioma" data-en-title="Switch language">
+    <span aria-hidden="true" data-en="ES">EN</span>
+  </button>
+
+  <button type="button" id="print-btn" class="tool-btn"
+          aria-label="Imprimir o guardar el CV en PDF" data-en-aria="Print or save the CV as PDF"
+          title="Imprimir / PDF" data-en-title="Print / PDF">
+    <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-download"/></svg>
+  </button>
+</div>
+
+<div class="layout">
+
+  <!-- ══ Columna izquierda ══ -->
+  <aside class="sidebar">
+    <div class="card card--profile">
+      <header class="profile">
+        <picture class="avatar">
+          <source srcset="assets/profile.webp" type="image/webp">
+          <img src="assets/profile.jpg" width="640" height="877" fetchpriority="high"
+               alt="Retrato de Edgar Alberto Ng Angulo"
+               data-en-alt="Portrait of Edgar Alberto Ng Angulo">
+        </picture>
+
+        <h1 class="name">Edgar Ng</h1>
+        <p class="fullname">Edgar Alberto Ng Angulo</p>
+
+        <p class="role" data-en="Senior IT Support Agent">Agente de Soporte IT Senior</p>
+        <p class="role role--muted">
+          <span data-en="Software developer">Desarrollador de software</span> ·
+          <span data-en="Founder of Quantium Crew, S.A.">Fundador de Quantium Crew, S.A.</span>
+        </p>
+
+        <p class="meta">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-pin"/></svg>
+          <span data-en="Panama City, Panama">Ciudad de Panamá, Panamá</span>
+        </p>
+
+        <p class="bio" data-en="Senior IT support for a multi-branch pharmacy operation, and a software developer who ships: web apps in TypeScript and React, native Apple apps in Swift, and backends in Node and Python.">
+          Soporte IT senior para una operación de farmacias con varias sucursales, y desarrollador
+          que entrega: aplicaciones web en TypeScript y React, apps nativas de Apple en Swift, y
+          backends en Node y Python.
+        </p>
+      </header>
+
+      <div class="actions">
+        <button type="button" id="open-contact" class="btn btn--primary">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-chat"/></svg>
+          <span data-en="Get in touch">Hablemos</span>
+        </button>
+        <button type="button" id="download-cv" class="btn btn--ghost">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-download"/></svg>
+          <span data-en="Download CV">Descargar CV</span>
+        </button>
+      </div>
+
+      <nav class="socials" aria-label="Perfiles en redes" data-en-aria="Social profiles">
+        <a href="https://github.com/sharkstar03" rel="me noopener" target="_blank" aria-label="GitHub de Edgar Ng" data-en-aria="Edgar Ng on GitHub">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-github"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/edgar-ng-sharkstar03" rel="me noopener" target="_blank" aria-label="LinkedIn de Edgar Ng" data-en-aria="Edgar Ng on LinkedIn">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-linkedin"/></svg>
+        </a>
+        <a href="https://x.com/EdgarNg_Shark" rel="me noopener" target="_blank" aria-label="Perfil de Edgar Ng en X" data-en-aria="Edgar Ng on X">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-x"/></svg>
+        </a>
+        <a href="https://www.instagram.com/its_shark03/" rel="me noopener" target="_blank" aria-label="Instagram de Edgar Ng" data-en-aria="Edgar Ng on Instagram">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-instagram"/></svg>
+        </a>
+      </nav>
+    </div>
+
+    <section class="card card--stack" aria-labelledby="stack-title">
+      <h2 class="card-title" id="stack-title">
+        <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+        <span data-en="Tech stack">Stack tecnológico</span>
+      </h2>
+
+      <h3 class="group-title" data-en="Languages">Lenguajes</h3>
+      <ul class="tags">
+        <li>TypeScript</li><li>JavaScript</li><li>Python</li>
+        <li>PHP</li><li>Swift</li><li>SQL</li><li>Bash</li>
+      </ul>
+
+      <h3 class="group-title" data-en="Frontend">Frontend</h3>
+      <ul class="tags">
+        <li>React</li><li>Next.js</li><li>Vite</li>
+        <li>SwiftUI</li><li>Tailwind CSS</li><li>HTML / CSS</li>
+      </ul>
+
+      <h3 class="group-title" data-en="Backend and data">Backend y datos</h3>
+      <ul class="tags">
+        <li>Node.js</li><li>Express</li><li>FastAPI</li><li>Laravel</li>
+        <li>PostgreSQL</li><li>Supabase</li><li>SQLite</li>
+      </ul>
+
+      <h3 class="group-title" data-en="Infrastructure and support">Infraestructura y soporte</h3>
+      <ul class="tags">
+        <li>Docker</li><li>Git</li><li>GitHub Actions</li><li>Nginx</li>
+        <li>Linux</li><li>Windows</li><li>macOS</li>
+        <li data-en="LAN / Wi-Fi / VPN networks">Redes LAN / Wi-Fi / VPN</li>
+      </ul>
+    </section>
+  </aside>
+
+  <!-- ══ Columna derecha ══ -->
+  <main class="content" id="contenido">
+
+    <nav class="tabs" aria-label="Secciones del currículum" data-en-aria="Curriculum sections">
+      <a href="#perfil" class="tab is-active" data-en="Profile">Perfil</a>
+      <a href="#experiencia" class="tab" data-en="Experience">Experiencia</a>
+      <a href="#habilidades" class="tab" data-en="Skills">Habilidades</a>
+      <a href="#proyectos" class="tab" data-en="Projects">Proyectos</a>
+      <a href="#educacion" class="tab" data-en="Education">Educación</a>
+      <a href="#contacto" class="tab" data-en="Contact">Contacto</a>
+    </nav>
+
+    <!-- ── Perfil ── -->
+    <section id="perfil" class="section" aria-labelledby="perfil-title">
+      <div class="card">
+        <h2 class="card-title" id="perfil-title">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-user"/></svg>
+          <span data-en="Professional profile">Perfil profesional</span>
+        </h2>
+
+        <p data-en="I am a Senior IT Support Agent at Farmacia Saba, where I keep the day-to-day technology of a multi-branch pharmacy operation running: workstations, point-of-sale systems, networks and the users behind them.">
+          Soy <strong>Agente de Soporte IT Senior en Farmacia Saba</strong>, donde mantengo en pie
+          la tecnología del día a día de una operación de farmacias con varias sucursales: equipos,
+          puntos de venta, redes y las personas que los usan.
+        </p>
+        <p data-en="In parallel I founded Quantium Crew, S.A., a Panamanian software company. There I design and build web applications with TypeScript and React, native Apple apps with Swift and SwiftUI, dashboards and integrations — everything containerised with Docker and versioned on GitHub.">
+          En paralelo fundé <strong>Quantium Crew, S.A.</strong>, empresa panameña de desarrollo de
+          software. Ahí diseño y construyo aplicaciones web con TypeScript y React, apps nativas de
+          Apple con Swift y SwiftUI, dashboards e integraciones; todo contenerizado con Docker y
+          versionado en GitHub.
+        </p>
+        <p data-en="Self-taught, pragmatic and comfortable moving between the support desk and the code editor. I read documentation before I guess, and I write down what I fix.">
+          Autodidacta, pragmático y cómodo moviéndome entre la mesa de soporte y el editor de
+          código. Leo documentación antes de adivinar, y dejo por escrito lo que arreglo.
+        </p>
+
+        <ul class="stats">
+          <li>
+            <span class="stat-num">3<abbr title="años">a</abbr> 4<abbr title="meses">m</abbr></span>
+            <span class="stat-label" data-en="Unbroken work history">Trayectoria laboral continua</span>
+          </li>
+          <li>
+            <span class="stat-num">2025</span>
+            <span class="stat-label" data-en="Founded Quantium Crew, S.A.">Funda Quantium Crew, S.A.</span>
+          </li>
+          <li>
+            <span class="stat-num">14</span>
+            <span class="stat-label" data-en="Projects in active development">Proyectos en desarrollo</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── Experiencia ── -->
+    <section id="experiencia" class="section" aria-labelledby="exp-title">
+      <h2 class="section-title" id="exp-title">
+        <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-briefcase"/></svg>
+        <span data-en="Work experience">Experiencia laboral</span>
+      </h2>
+
+      <ol class="timeline">
+        <li class="card entry entry--current">
+          <p class="entry-date">
+            <time datetime="2025-06-16" data-en="Jun 2025">jun 2025</time> —
+            <span data-en="present">presente</span>
+          </p>
+          <h3 class="entry-role" data-en="Senior IT Support Agent">Agente de Soporte IT Senior</h3>
+          <p class="entry-org">Farmacia Saba, S. A. · <span data-en="Panama City">Ciudad de Panamá</span></p>
+          <ul class="bullets">
+            <li data-en="First and second line support for users and branches: workstations, peripherals, printers and point-of-sale systems.">
+              Soporte de primer y segundo nivel a usuarios y sucursales: estaciones de trabajo,
+              periféricos, impresoras y sistemas de punto de venta.
+            </li>
+            <li data-en="Setup, diagnosis and maintenance of local networks, links between branches and remote access.">
+              Configuración, diagnóstico y mantenimiento de redes locales, enlaces entre sucursales
+              y accesos remotos.
+            </li>
+            <li data-en="Administration of user accounts, permissions and corporate equipment.">
+              Administración de cuentas de usuario, permisos y equipos corporativos.
+            </li>
+            <li data-en="Internal technical documentation and training so a fix does not have to be reinvented.">
+              Documentación técnica interna y capacitación, para que un arreglo no haya que
+              reinventarlo.
+            </li>
+          </ul>
+        </li>
+
+        <li class="card entry">
+          <p class="entry-date">
+            <time datetime="2025-05" data-en="May 2025">may 2025</time> —
+            <span data-en="present">presente</span>
+          </p>
+          <h3 class="entry-role" data-en="Founder and developer">Fundador y desarrollador</h3>
+          <p class="entry-org">
+            <a class="entry-link" href="https://github.com/QUANTIUM-CREW-S-A" rel="noopener" target="_blank">
+              Quantium Crew, S.A.
+              <svg class="ico ico-xs" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-link"/></svg>
+            </a>
+          </p>
+          <ul class="bullets">
+            <li data-en="Custom software company in Panama: web applications, native Apple apps, dashboards, integrations and automation.">
+              Empresa de software a la medida en Panamá: aplicaciones web, apps nativas de Apple,
+              dashboards, integraciones y automatización.
+            </li>
+            <li data-en="COTFACT, a quoting and invoicing system for small businesses: React, Vite, TypeScript, Express and PostgreSQL, with PDF/CSV export, offline PWA mode and 2FA. Over 200 commits.">
+              <strong>COTFACT</strong>, sistema de cotizaciones y facturación para pymes: React,
+              Vite, TypeScript, Express y PostgreSQL, con exportación a PDF y CSV, modo offline
+              (PWA) y 2FA. Más de 200 commits.
+            </li>
+            <li data-en="Native Apple apps with Swift and SwiftUI: a family health record and a habit-tracking module built on SwiftData.">
+              Apps nativas de Apple con Swift y SwiftUI: una ficha médica familiar y un módulo de
+              seguimiento de hábitos sobre SwiftData.
+            </li>
+            <li data-en="Engineering practice: Docker for every environment, Conventional Commits, CI on GitHub Actions and secrets kept out of the repository.">
+              Práctica de ingeniería: Docker en todos los entornos, Conventional Commits, CI en
+              GitHub Actions y secretos fuera del repositorio.
+            </li>
+          </ul>
+        </li>
+
+        <li class="card entry">
+          <p class="entry-date">
+            <time datetime="2023-05-02" data-en="May 2023">may 2023</time> —
+            <time datetime="2025-06-16" data-en="Jun 2025">jun 2025</time>
+          </p>
+          <h3 class="entry-role" data-en="Rental Agent">Agente de Renta</h3>
+          <p class="entry-org">
+            <a class="entry-link" href="https://crs.com.pa/" rel="noopener" target="_blank">
+              Car Rental Services, S. A. — CRS Group
+              <svg class="ico ico-xs" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-link"/></svg>
+            </a>
+            <span class="entry-note">(Thrifty · Hertz · Dollar · Firefly)</span>
+          </p>
+          <ul class="bullets">
+            <li data-en="Reservations, quotes and contracts in the Restrent system, for walk-in and corporate customers.">
+              Reservas, cotizaciones y contratos en el sistema Restrent, para clientes de mostrador
+              y corporativos.
+            </li>
+            <li data-en="Fleet coordination and vehicle distribution logistics between branches.">
+              Coordinación de flota y logística de distribución vehicular entre sucursales.
+            </li>
+            <li data-en="Incident resolution and interdepartmental coordination under service-level pressure.">
+              Resolución de incidencias y coordinación interdepartamental bajo presión de servicio.
+            </li>
+            <li data-en="Two years and one month, moving on to the IT role with no gap between jobs.">
+              Dos años y un mes, con paso al rol de IT sin un solo día de brecha entre empleos.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ── Habilidades ── -->
+    <section id="habilidades" class="section" aria-labelledby="hab-title">
+      <h2 class="section-title" id="hab-title">
+        <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-grid"/></svg>
+        <span data-en="Areas of expertise">Áreas de especialización</span>
+      </h2>
+
+      <div class="grid grid--2">
+        <article class="card skill">
+          <h3 data-en="Software development">Desarrollo de software</h3>
+          <ul class="bullets">
+            <li data-en="Web interfaces with React, Next.js and TypeScript">Interfaces web con React, Next.js y TypeScript</li>
+            <li data-en="REST APIs with Node/Express, FastAPI and Laravel">APIs REST con Node/Express, FastAPI y Laravel</li>
+            <li data-en="Relational modelling with PostgreSQL and Supabase">Modelado relacional con PostgreSQL y Supabase</li>
+            <li data-en="Native Apple apps with Swift and SwiftUI">Apps nativas de Apple con Swift y SwiftUI</li>
+          </ul>
+        </article>
+
+        <article class="card skill">
+          <h3 data-en="IT support and operations">Soporte IT y operación</h3>
+          <ul class="bullets">
+            <li data-en="Hardware, operating system and peripheral diagnosis">Diagnóstico de hardware, sistema operativo y periféricos</li>
+            <li data-en="Point-of-sale systems and branch continuity">Sistemas de punto de venta y continuidad de sucursal</li>
+            <li data-en="Remote support and ticket management">Soporte remoto y gestión de tickets</li>
+            <li data-en="Accounts, permissions and equipment inventory">Cuentas, permisos e inventario de equipos</li>
+          </ul>
+        </article>
+
+        <article class="card skill">
+          <h3 data-en="Networks and systems">Redes y sistemas</h3>
+          <ul class="bullets">
+            <li data-en="LAN and Wi-Fi setup, segmentation and troubleshooting">Montaje LAN y Wi-Fi, segmentación y troubleshooting</li>
+            <li data-en="VPN access and links between branches">Accesos VPN y enlaces entre sucursales</li>
+            <li data-en="Linux, Windows and macOS administration">Administración de Linux, Windows y macOS</li>
+            <li data-en="Services behind Nginx and Docker containers">Servicios detrás de Nginx y contenedores Docker</li>
+          </ul>
+        </article>
+
+        <article class="card skill">
+          <h3 data-en="Practice and method">Práctica y método</h3>
+          <ul class="bullets">
+            <li data-en="Git, Conventional Commits and code review">Git, Conventional Commits y revisión de código</li>
+            <li data-en="CI/CD with GitHub Actions">CI/CD con GitHub Actions</li>
+            <li data-en="Secrets management and dependency hygiene">Gestión de secretos e higiene de dependencias</li>
+            <li data-en="Technical writing in Spanish and English">Documentación técnica en español e inglés</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Proyectos ── -->
+    <section id="proyectos" class="section" aria-labelledby="proy-title">
+      <h2 class="section-title" id="proy-title">
+        <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-layers"/></svg>
+        <span data-en="Selected projects">Proyectos destacados</span>
+      </h2>
+
+      <div class="grid grid--2">
+        <article class="card project">
+          <h3>COTFACT <span class="badge" data-en="private">privado</span></h3>
+          <p data-en="Quoting and invoicing for small businesses: CRUD, PDF and CSV export, clients, payment methods, metrics dashboard, offline PWA and two-factor authentication.">
+            Cotizaciones y facturación para pymes: CRUD, exportación a PDF y CSV, clientes, métodos
+            de pago, panel de métricas, PWA con modo offline y doble factor.
+          </p>
+          <ul class="tags tags--sm">
+            <li>React</li><li>TypeScript</li><li>Vite</li><li>Express</li><li>PostgreSQL</li>
+          </ul>
+        </article>
+
+        <article class="card project">
+          <h3>
+            <a class="entry-link" href="https://github.com/sharkstar03/API-Microservices" rel="noopener" target="_blank">
+              API Microservices
+              <svg class="ico ico-xs" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-github"/></svg>
+            </a>
+          </h3>
+          <p data-en="E-commerce backend split into five services behind an API Gateway, with RabbitMQ messaging. A reusable base so auth, proxying and deployment do not get rewritten every time. MIT licence, CI and bilingual README.">
+            Backend de e-commerce en cinco servicios tras un API Gateway, con mensajería RabbitMQ.
+            Una base reutilizable para no reescribir auth, proxy y despliegue en cada proyecto.
+            Licencia MIT, CI y README bilingüe.
+          </p>
+          <ul class="tags tags--sm">
+            <li>Node.js</li><li>Docker</li><li>RabbitMQ</li><li>MongoDB</li>
+          </ul>
+        </article>
+
+        <article class="card project">
+          <h3>
+            <a class="entry-link" href="https://github.com/sharkstar03/Viang-Solution" rel="noopener" target="_blank">
+              Viang Solution
+              <svg class="ico ico-xs" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-github"/></svg>
+            </a>
+          </h3>
+          <p data-en="Corporate site on Next.js and Supabase, with editable content, lead capture, tests, Dockerfile and a performance budget enforced in CI.">
+            Sitio corporativo sobre Next.js y Supabase, con contenido administrable, captura de
+            leads, pruebas, Dockerfile y un presupuesto de rendimiento impuesto en CI.
+          </p>
+          <ul class="tags tags--sm">
+            <li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Docker</li>
+          </ul>
+        </article>
+
+        <article class="card project">
+          <h3>
+            <a class="entry-link" href="https://github.com/sharkstar03/Net_dashboard" rel="noopener" target="_blank">
+              Net Dashboard
+              <svg class="ico ico-xs" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-github"/></svg>
+            </a>
+          </h3>
+          <p data-en="Real-time network and system monitoring with alerts over Telegram and WhatsApp, and history persisted in SQLite.">
+            Monitoreo de red y sistema en tiempo real con alertas por Telegram y WhatsApp, e
+            histórico persistido en SQLite.
+          </p>
+          <ul class="tags tags--sm">
+            <li>Python</li><li>Flask</li><li>SQLite</li><li>Chart.js</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Educación ── -->
+    <section id="educacion" class="section" aria-labelledby="edu-title">
+      <h2 class="section-title" id="edu-title">
+        <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-award"/></svg>
+        <span data-en="Education and certifications">Educación y certificaciones</span>
+      </h2>
+
+      <ol class="timeline">
+        <li class="card entry">
+          <p class="entry-date"><time datetime="2026">2026</time></p>
+          <h3 class="entry-role">Google IT Support Professional Certificate</h3>
+          <p class="entry-org">Coursera</p>
+          <button type="button" class="btn btn--tiny cert-btn"
+                  data-image="assets/certificados/google-it-support.webp"
+                  data-caption="Google IT Support Professional Certificate, Coursera"
+                  data-en-caption="Google IT Support Professional Certificate, Coursera">
+            <svg class="ico ico-xs" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-file"/></svg>
+            <span data-en="View certificate">Ver certificado</span>
+          </button>
+        </li>
+
+        <li class="card entry">
+          <p class="entry-date"><time datetime="2023">2023</time></p>
+          <h3 class="entry-role" data-en="Higher Technician in Computing — Networks and Software">
+            Técnico Superior en Informática — Redes y Software
+          </h3>
+          <p class="entry-org">Centro Superior de Cultura y Turismo</p>
+          <button type="button" class="btn btn--tiny cert-btn"
+                  data-image="assets/certificados/tecnico-superior.webp"
+                  data-caption="Título de Técnico Superior en Informática"
+                  data-en-caption="Higher Technician in Computing diploma">
+            <svg class="ico ico-xs" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-file"/></svg>
+            <span data-en="View certificate">Ver certificado</span>
+          </button>
+        </li>
+
+        <li class="card entry">
+          <p class="entry-date"><time datetime="2020">2020</time></p>
+          <h3 class="entry-role" data-en="Bachelor of Science — Computer Networks">
+            Bachiller en Ciencias — Redes Informáticas
+          </h3>
+          <p class="entry-org">Canadian International School</p>
+          <button type="button" class="btn btn--tiny cert-btn"
+                  data-image="assets/certificados/bachiller.webp"
+                  data-caption="Diploma de Bachiller en Ciencias"
+                  data-en-caption="Bachelor of Science diploma">
+            <svg class="ico ico-xs" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-file"/></svg>
+            <span data-en="View certificate">Ver certificado</span>
+          </button>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ── Idiomas y competencias ── -->
+    <section id="idiomas" class="section" aria-labelledby="idi-title">
+      <div class="card">
+        <h2 class="card-title" id="idi-title">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-globe"/></svg>
+          <span data-en="Languages and soft skills">Idiomas y competencias</span>
+        </h2>
+
+        <div class="grid grid--2">
+          <div>
+            <h3 class="group-title" data-en="Languages">Idiomas</h3>
+            <dl class="langs">
+              <dt data-en="Spanish">Español</dt>
+              <dd data-en="Native">Nativo</dd>
+              <dt data-en="English">Inglés</dt>
+              <dd data-en="Professional working proficiency">Profesional</dd>
+            </dl>
+          </div>
+          <div>
+            <h3 class="group-title" data-en="Key strengths">Competencias clave</h3>
+            <ul class="bullets">
+              <li data-en="Diagnosis and complex problem solving">Diagnóstico y resolución de problemas complejos</li>
+              <li data-en="Self-taught learning and fast tech adoption">Aprendizaje autodidacta y adopción rápida de tecnología</li>
+              <li data-en="Clear technical writing">Redacción técnica clara</li>
+              <li data-en="Open source tooling and adaptation">Uso y adaptación de herramientas open source</li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ── Contacto ── -->
+    <section id="contacto" class="section" aria-labelledby="con-title">
+      <div class="card">
+        <h2 class="card-title" id="con-title">
+          <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-chat"/></svg>
+          <span data-en="Contact">Contacto</span>
+        </h2>
+
+        <ul class="contact-list">
+          <li>
+            <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-mail"/></svg>
+            <a href="mailto:sharkstar03@gmail.com">sharkstar03@gmail.com</a>
+          </li>
+          <li>
+            <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>
+            <a href="https://wa.me/50761351747" rel="noopener" target="_blank">+507 6135-1747 · WhatsApp</a>
+          </li>
+          <li>
+            <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-linkedin"/></svg>
+            <a href="https://www.linkedin.com/in/edgar-ng-sharkstar03" rel="noopener" target="_blank">linkedin.com/in/edgar-ng-sharkstar03</a>
+          </li>
+          <li>
+            <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-github"/></svg>
+            <a href="https://github.com/sharkstar03" rel="noopener" target="_blank">github.com/sharkstar03</a>
+          </li>
+        </ul>
+
+        <p class="fineprint" data-en="Professional and personal references available on request.">
+          Referencias laborales y personales disponibles a solicitud.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>
+        <span data-en="Built with plain HTML, CSS and JavaScript. No frameworks, no trackers.">
+          Hecho con HTML, CSS y JavaScript puro. Sin frameworks ni rastreadores.
+        </span>
+        <a href="https://github.com/sharkstar03/Personal_CV_Page" rel="noopener" target="_blank" data-en="Source code">Código fuente</a>
+      </p>
+      <p class="fineprint">© <span id="year">2026</span> Edgar Alberto Ng Angulo · <span data-en="MIT Licence">Licencia MIT</span></p>
+    </footer>
+  </main>
+</div>
+
+<!-- ══ Diálogo de contacto ══ -->
+<div class="overlay" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+  <div class="modal card">
+    <div class="modal-head">
+      <h2 id="contact-modal-title" data-en="Establish connection">Establecer conexión</h2>
+      <button type="button" class="icon-btn modal-close" aria-label="Cerrar" data-en-aria="Close">
+        <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-close"/></svg>
+      </button>
     </div>
 
-    <div id="cursor-follower"></div>
-    <canvas id="bg-canvas"></canvas> <!-- Canvas para partículas -->
-    <div class="bg-gradient"></div>
+    <p class="terminal" data-en="&gt; Select a communication channel">&gt; Seleccione un canal de comunicación</p>
 
-    <div class="main-layout">
-        <!-- Columna Izquierda: Tarjeta de Perfil Fija -->
-        <aside class="profile-sidebar">
-            <div class="profile-card glass-panel"> <!-- Se eliminó data-tilt -->
-                <div class="profile-header">
-                    <!-- Foto de Perfil Restaurada -->
-                    <div class="avatar-container">
-                        <img src="assets/profile.jpg" alt="Edgar Ng" class="avatar">
-                        <div class="status-indicator"></div>
-                    </div>
+    <ul class="channels">
+      <li>
+        <a href="https://wa.me/50761351747" rel="noopener" target="_blank">
+          <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-whatsapp"/></svg>
+          <span><strong>WhatsApp</strong><small data-en="Fastest route">La vía más rápida</small></span>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:sharkstar03@gmail.com?subject=Contacto%20desde%20tu%20CV">
+          <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-mail"/></svg>
+          <span><strong data-en="Email">Correo</strong><small>sharkstar03@gmail.com</small></span>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/edgar-ng-sharkstar03" rel="noopener" target="_blank">
+          <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-linkedin"/></svg>
+          <span><strong>LinkedIn</strong><small data-en="Professional profile">Perfil profesional</small></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 
-                    <h1 class="glitch-text" data-text="EDGAR NG">EDGAR NG</h1>
-                    <span class="role-badge">Founder & CEO @ QUANTIUM CREW</span>
-                    <span class="role-badge-secondary">IT Senior @ Farmacia Saba</span>
-                    
-                    <div class="profile-contact-info">
-                        <p><i data-feather="map-pin"></i> Panamá</p>
-                        <!-- Correo y Teléfono eliminados de aquí por privacidad/limpieza -->
-                    </div>
-
-                    <p class="profile-bio">
-                        Liderando la innovación como Founder de mi propia Startup <strong>QUANTIUM CREW</strong>, mientras gestiono la infraestructura crítica de <strong>Farmacia Saba</strong> como IT Senior. 
-                        Combino visión empresarial con ejecución técnica de alto nivel.
-                    </p>
-                </div>
-
-                <div class="profile-actions">
-                    <button id="open-contact-btn" class="btn-primary w-full">
-                        <i data-feather="message-circle"></i> Hablemos
-                    </button>
-                    <a href="#" class="btn-secondary w-full" id="download-cv-btn">
-                        <i data-feather="download"></i> Descargar CV
-                    </a>
-                </div>
-
-    <!-- Modal de Contacto Cyberpunk -->
-    <div id="contact-modal" class="modal-overlay">
-        <div class="modal-container glass-panel">
-            <button class="modal-close">&times;</button>
-            <div class="modal-header">
-                <h2 class="glitch-text" data-text="ESTABLECER_CONEXION">ESTABLECER_CONEXION</h2>
-                <div class="modal-status">
-                    <span class="status-dot"></span> SYSTEM_READY
-                </div>
-            </div>
-            
-            <div class="modal-body">
-                <p class="terminal-text">> Seleccione protocolo de comunicación:</p>
-                
-                <div class="contact-options">
-                    <a href="https://wa.me/50761351747" target="_blank" class="contact-card whatsapp">
-                        <div class="icon-box"><i data-feather="message-square"></i></div>
-                        <div class="info-box">
-                            <h3>WhatsApp</h3>
-                            <span>Chat Directo / Rápido</span>
-                        </div>
-                        <div class="arrow">→</div>
-                    </a>
-
-                    <a href="mailto:mr_ng03@hotmail.com?subject=Contacto%20desde%20Portafolio&body=Hola%20Edgar..." class="contact-card email">
-                        <div class="icon-box"><i data-feather="mail"></i></div>
-                        <div class="info-box">
-                            <h3>Correo Electrónico</h3>
-                            <span>mr_ng03@hotmail.com</span>
-                        </div>
-                        <div class="arrow">→</div>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/edgar-ng-sharkstar03" target="_blank" class="contact-card linkedin">
-                        <div class="icon-box"><i data-feather="linkedin"></i></div>
-                        <div class="info-box">
-                            <h3>LinkedIn</h3>
-                            <span>Perfil Profesional</span>
-                        </div>
-                        <div class="arrow">→</div>
-                    </a>
-                </div>
-
-                <div class="terminal-footer">
-                    <span class="cursor-blink">>_</span> Esperando input del usuario...
-                </div>
-            </div>
-        </div>
+<!-- ══ Visor de certificados ══ -->
+<div class="overlay" id="image-modal" role="dialog" aria-modal="true" aria-labelledby="image-modal-title" hidden>
+  <div class="modal modal--image card">
+    <div class="modal-head">
+      <h2 id="image-modal-title" data-en="Certificate">Certificado</h2>
+      <button type="button" class="icon-btn modal-close" aria-label="Cerrar" data-en-aria="Close">
+        <svg class="ico ico-sm" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-close"/></svg>
+      </button>
     </div>
+    <img id="modal-image" src="" alt="" loading="lazy">
+  </div>
+</div>
 
-                <div class="social-links-row">
-                    <a href="https://github.com/sharkstar03" target="_blank" class="social-icon" title="GitHub"><i data-feather="github"></i></a>
-                    <a href="https://www.linkedin.com/in/edgar-ng-sharkstar03" target="_blank" class="social-icon" title="LinkedIn"><i data-feather="linkedin"></i></a>
-                    <a href="https://x.com/EdgarNg_Shark" target="_blank" class="social-icon" title="X">
-                        <!-- Logo X (Twitter) SVG -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/its_shark03/" target="_blank" class="social-icon" title="Instagram"><i data-feather="instagram"></i></a>
-                </div>
-            </div>
-
-                    <!-- Tech Stack Mini Widget (Actualizado con GitHub Info) -->
-                    <div class="tech-widget glass-panel">
-                        <h3>Stack Tecnológico</h3>
-                        <div class="tech-tags">
-                            <!-- Frontend -->
-                            <span>React</span>
-                            <span>Vue.js</span>
-                            <span>JavaScript</span>
-                            <span>HTML5/CSS3</span>
-                            
-                            <!-- Backend -->
-                            <span>Node.js</span>
-                            <span>Express</span>
-                            <span>Python</span>
-                            <span>Django</span>
-                            <span>FastAPI</span>
-                            <span>PHP</span>
-
-                            <!-- DevOps -->
-                            <span>Docker</span>
-                            <span>Kubernetes</span>
-                            <span>AWS</span>
-                            <span>Azure</span>
-                            <span>Google Cloud</span>
-                            <span>Terraform</span>
-
-                            <!-- DB & Others -->
-                            <span>MongoDB</span>
-                            <span>PostgreSQL</span>
-                            <span>SQL Server</span>
-                            <span>Redis</span>
-                            <span>Git/GitHub</span>
-                        </div>
-                        
-                        <h3 style="margin-top: 15px; font-size: 0.9rem; color: var(--accent-purple);">Aprendiendo</h3>
-                        <div class="tech-tags">
-                            <span>Rust</span>
-                            <span>GraphQL</span>
-                            <span>NestJS</span>
-                        </div>
-                    </div>
-        </aside>
-
-        <!-- Columna Derecha: Contenido Scrolleable -->
-        <main class="content-area">
-            
-            <!-- Navegación simple estilo pestañas -->
-            <nav class="content-nav glass-panel">
-                <a href="#about" class="nav-item active">Perfil</a>
-                <a href="#experience" class="nav-item">Experiencia</a>
-                <a href="#skills" class="nav-item">Habilidades</a>
-                <a href="#projects" class="nav-item">Proyectos</a>
-            </nav>
-
-            <section id="about" class="content-section fade-in">
-                <div class="glass-panel">
-                    <h2 class="section-title"><i data-feather="user"></i> Perfil Profesional</h2>
-                    <div class="bio-content">
-                    <p>
-                        Mi perfil es híbrido: soy el <strong>Founder de QUANTIUM CREW</strong>, una Tech Startup emergente, y simultáneamente me desempeño como <strong>IT Senior en Farmacia Saba</strong>. 
-                        Esta dualidad me permite tener la agilidad de un emprendedor y la solidez operativa de un gestor corporativo.
-                    </p>
-                    <p>
-                        En mi startup construyo el futuro con desarrollo web y soluciones innovadoras, mientras que en mi rol senior garantizo la estabilidad de infraestructuras críticas para +48 sucursales.
-                    </p>
-                    
-                    <!-- Stats Grid Restaurado -->
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number">48+</span>
-                            <span class="stat-label">Sucursales (Saba)</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">+4</span>
-                            <span class="stat-label">Años Exp. Técnica</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">Founder</span>
-                            <span class="stat-label">Quantium Crew</span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </section>
-
-            <!-- Nueva Sección: Experiencia Laboral -->
-            <section id="experience" class="content-section fade-in">
-                <h2 class="section-header">Experiencia Laboral</h2>
-                <div class="timeline">
-                    <!-- IT Senior & Encargado (Farmacia Saba) -->
-                    <div class="timeline-item glass-panel" style="border-left: 4px solid var(--accent-cyan);">
-                        <div class="timeline-date">2025 - Presente</div>
-                        <div class="timeline-content">
-                            <h3>IT Senior & Encargado</h3>
-                            <span class="institution">Farmacia Saba</span>
-                            <ul class="skill-list">
-                                <li>Liderazgo en la transformación digital, migrando sistemas locales a la nube (Azure).</li>
-                                <li>Diseño e implementación de arquitectura de red segura con firewalls Fortinet y Cisco.</li>
-                                <li>Desarrollo de sistema de gestión de inventario y ventas a medida (Python/Django + SQL Server).</li>
-                                <li>Supervisión de equipo técnico para soporte y mantenimiento en 48+ sucursales.</li>
-                                <li>Monitoreo de infraestructura en tiempo real y gestión de seguridad.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Quantium Crew (Nuevo) -->
-                    <div class="timeline-item glass-panel" style="border-left: 4px solid var(--accent-cyan);">
-                        <div class="timeline-date">2024 - Presente</div>
-                        <div class="timeline-content">
-                            <h3>Founder & CEO</h3>
-                            <span class="institution">Quantium Crew (Tech Startup)</span>
-                            <ul class="skill-list">
-                                <li>Fundación y dirección estratégica de startup tecnológica enfocada en soluciones digitales.</li>
-                                <li>Liderazgo en el desarrollo de plataformas web personalizadas y software a medida.</li>
-                                <li>Gestión de servicios de soporte IT corporativo y venta de hardware especializado.</li>
-                                <li>Creación de alianzas comerciales y expansión de cartera de clientes.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Salto de Página para Impresión -->
-                    <div class="print-page-break"></div>
-
-                    <!-- Allqui.app -->
-                    <div class="timeline-item glass-panel">
-                        <div class="timeline-date">2023 - 2024</div>
-                        <div class="timeline-content">
-                            <h3>
-                                <a href="https://allqui.app/home.php" target="_blank" class="timeline-link" title="Visitar Allqui.app">
-                                    Backend & Frontend Developer <i data-feather="external-link" style="width: 14px; height: 14px; vertical-align: middle;"></i>
-                                </a>
-                            </h3>
-                            <span class="institution">Allqui.app</span>
-                            <ul class="skill-list">
-                                <li>Desarrollo e integración de módulos backend utilizando PHP para optimizar procesos y flujos de datos.</li>
-                                <li>Diseño y maquetación de interfaces responsivas y modernas mediante SCSS, mejorando la experiencia de usuario.</li>
-                                <li>Colaboración activa y gestión de versiones en equipo a través de GitHub.</li>
-                                <li>Optimización de consultas a bases de datos MongoDB para mejorar el rendimiento del sistema.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Agente de Renta -->
-                    <div class="timeline-item glass-panel">
-                        <div class="timeline-date">2024 - 2025</div>
-                        <div class="timeline-content">
-                            <h3>
-                                <a href="https://crs.com.pa/" target="_blank" class="timeline-link" title="Visitar CRS Group">
-                                    Agente de Renta <i data-feather="external-link" style="width: 14px; height: 14px; vertical-align: middle;"></i>
-                                </a>
-                            </h3>
-                            <span class="institution">CRS Group (Thrifty, Hertz, Dollar, Firefly)</span>
-                            <ul class="skill-list">
-                                <li>Gestión de reservas y atención a clientes corporativos.</li>
-                                <li>Gestión integral en sistema Restrent: cotizaciones, renta de equipos y logística de distribución vehicular.</li>
-                                <li>Resolución de problemas complejos y coordinación interdepartamental.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Auxiliar Soporte -->
-                    <div class="timeline-item glass-panel">
-                        <div class="timeline-date">2021 - 2023</div>
-                        <div class="timeline-content">
-                            <h3>Auxiliar de Soporte IT</h3>
-                            <span class="institution">Farmacia Saba</span>
-                            <ul class="skill-list">
-                                <li>Instalación y configuración de sistemas en 20 farmacias.</li>
-                                <li>Configuración de redes, firewalls y servidores virtuales.</li>
-                                <li>Soporte remoto (Anydesk, TeamViewer) y presencial.</li>
-                                <li>Instalación de CCTV y telefonía IP.</li>
-                                <li>Manejo de SQL Express y sistema LDCOM.</li>
-                                <li>Capacitación interna y creación de documentación técnica.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="skills" class="content-section fade-in">
-                <h2 class="section-header">Áreas de Especialización</h2>
-                
-                <!-- Barras de Progreso Detalladas -->
-                <div class="glass-panel mb-30">
-                    <h3 class="subsection-title">Niveles de Competencia</h3>
-                    <div class="skill-bars">
-                        <div class="skill-bar-container">
-                            <div class="skill-info">
-                                <span>Infraestructura & Hardware</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="progress-bg">
-                                <div class="progress-fill" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-info">
-                                <span>Redes & Comunicaciones (Cisco/Mikrotik)</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="progress-bg">
-                                <div class="progress-fill" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-bar-container">
-                            <div class="skill-info">
-                                <span>Desarrollo de Software (Frontend/Backend)</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="progress-bg">
-                                <div class="progress-fill" style="width: 85%"></div>
-                            </div>
-                        </div>
-                         <div class="skill-bar-container">
-                            <div class="skill-info">
-                                <span>Soporte Técnico & Troubleshooting</span>
-                                <span>98%</span>
-                            </div>
-                            <div class="progress-bg">
-                                <div class="progress-fill" style="width: 98%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="projects-grid-compact">
-                    <!-- Skill Card 1 -->
-                    <div class="project-card-compact glass-panel">
-                        <div class="project-icon">
-                            <i data-feather="code"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>Programación & Desarrollo</h3>
-                            <ul class="skill-list">
-                                <li>Desarrollo frontend con React</li>
-                                <li>Creación de sistemas internos y dashboards</li>
-                                <li>Integración y consumo de APIs</li>
-                                <li>Automatización básica de procesos</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card 2 -->
-                    <div class="project-card-compact glass-panel">
-                        <div class="project-icon">
-                            <i data-feather="wifi"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>Redes & Comunicaciones</h3>
-                            <ul class="skill-list">
-                                <li>Diseño e implementación LAN/WAN</li>
-                                <li>Configuración Cisco y MikroTik</li>
-                                <li>Segmentación y seguridad básica</li>
-                                <li>Diagnóstico y troubleshooting avanzado</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card 3 -->
-                     <div class="project-card-compact glass-panel">
-                        <div class="project-icon">
-                            <i data-feather="database"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>Gestión & Herramientas</h3>
-                            <ul class="skill-list">
-                                <li>Liderazgo de equipos y gestión de proyectos</li>
-                                <li>LDCOM, SAP (Básico), SQL Express</li>
-                                <li>Gestión de proveedores y contratos</li>
-                                <li>Documentación técnica y manuales</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Skill Card 4 -->
-                    <div class="project-card-compact glass-panel">
-                        <div class="project-icon">
-                            <i data-feather="server"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>Sistemas Operativos</h3>
-                            <ul class="skill-list">
-                                <li>Administración de Windows y Linux</li>
-                                <li>Instalación y optimización de sistemas</li>
-                                <li>Virtualización (VMware / VirtualBox)</li>
-                                <li>Gestión de servidores (NAS, Ubuntu, Windows)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Salto de Página para Impresión (Inicio Página 3) -->
-            <div class="print-page-break"></div>
-
-            <section id="projects" class="content-section fade-in">
-                <h2 class="section-header">Proyectos Destacados</h2>
-                <div class="projects-grid-compact">
-                    <!-- Project Card 1: CloudSecOps -->
-                    <a href="https://github.com/sharkstar03/CloudSecOps-Platform" target="_blank" class="project-card-compact glass-panel" style="text-decoration: none; color: inherit;">
-                        <div class="project-link">
-                            <i data-feather="github"></i>
-                        </div>
-                        <div class="project-icon">
-                            <i data-feather="shield"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>CloudSecOps Platform</h3>
-                            <p>Plataforma de seguridad cloud con monitoreo continuo AWS/Azure y alertas en tiempo real.</p>
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>Terraform</span>
-                                <span>React</span>
-                                <span>AWS</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Project Card 2: API Microservices -->
-                    <a href="https://github.com/sharkstar03/API-Microservices" target="_blank" class="project-card-compact glass-panel" style="text-decoration: none; color: inherit;">
-                        <div class="project-link">
-                            <i data-feather="github"></i>
-                        </div>
-                        <div class="project-icon">
-                            <i data-feather="grid"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>API Microservices Arch</h3>
-                            <p>Arquitectura de microservicios con Gateway centralizado, RabbitMQ y Swagger.</p>
-                            <div class="project-tags">
-                                <span>Node.js</span>
-                                <span>Docker</span>
-                                <span>K8s</span>
-                                <span>MongoDB</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Project Card 3: DevOps Toolkit -->
-                    <a href="https://github.com/sharkstar03/DevOps-Automation-Toolkit" target="_blank" class="project-card-compact glass-panel" style="text-decoration: none; color: inherit;">
-                        <div class="project-link">
-                            <i data-feather="github"></i>
-                        </div>
-                        <div class="project-icon">
-                            <i data-feather="settings"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>DevOps Automation Toolkit</h3>
-                            <p>Herramientas CI/CD para pipelines configurables y monitoreo con Prometheus/Grafana.</p>
-                            <div class="project-tags">
-                                <span>GitHub Actions</span>
-                                <span>Terraform</span>
-                                <span>Ansible</span>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Project Card 4: Net Dashboard -->
-                    <a href="https://github.com/sharkstar03/Net_dashboard" target="_blank" class="project-card-compact glass-panel" style="text-decoration: none; color: inherit;">
-                        <div class="project-link">
-                            <i data-feather="github"></i>
-                        </div>
-                        <div class="project-icon">
-                            <i data-feather="activity"></i>
-                        </div>
-                        <div class="project-info">
-                            <h3>Net Dashboard</h3>
-                            <p>Monitoreo de Red y Sistema en Tiempo Real con alertas (Telegram/WhatsApp) y Glassmorphism UI.</p>
-                            <div class="project-tags">
-                                <span>Python</span>
-                                <span>Flask</span>
-                                <span>SQLite</span>
-                                <span>Chart.js</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Nueva Sección: Servicios e Idiomas -->
-            <section id="services" class="content-section fade-in">
-                <div class="glass-panel">
-                    <h2 class="section-title"><i data-feather="briefcase"></i> Competencias & Idiomas</h2>
-                    <div class="services-grid">
-                        <div class="service-col">
-                            <h3><i data-feather="check-circle"></i> Competencias Clave</h3>
-                            <ul class="service-list">
-                                <li>Resolución de problemas complejos</li>
-                                <li>Pensamiento lógico y analítico</li>
-                                <li>Programación empírica orientada a soluciones</li>
-                                <li>Gestión e implementación Open Source</li>
-                                <li>Adaptabilidad tecnológica</li>
-                                <li>Aprendizaje autodidacta</li>
-                            </ul>
-                        </div>
-                        <div class="service-col">
-                            <h3><i data-feather="globe"></i> Idiomas</h3>
-                            <div class="language-item">
-                                <span class="lang-name">Español</span>
-                                <span class="lang-level">Nativo</span>
-                                <div class="progress-bg"><div class="progress-fill" style="width: 100%"></div></div>
-                            </div>
-                            <div class="language-item">
-                                <span class="lang-name">Inglés</span>
-                                <span class="lang-level">Profesional</span>
-                                <div class="progress-bg"><div class="progress-fill" style="width: 85%"></div></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="certificates" class="content-section fade-in">
-                <h2 class="section-header">Educación & Certificaciones</h2>
-                <div class="timeline">
-                    <!-- Certificaciones -->
-                    <div class="timeline-item glass-panel">
-                        <div class="timeline-date">2026</div>
-                        <div class="timeline-content">
-                            <h3>
-                                Google IT Support Professional Certificate
-                                <a href="#" class="cert-btn open-cert-modal" data-image="assets/IMG_1531.png" onclick="return false;">
-                                    <i data-feather="file-text"></i> Ver Certificado
-                                </a>
-                            </h3>
-                            <span class="institution">Coursera</span>
-                        </div>
-                    </div>
-
-                    <!-- Técnico Superior -->
-                    <div class="timeline-item glass-panel">
-                        <div class="timeline-date">2023</div>
-                        <div class="timeline-content">
-                            <h3>
-                                Técnico Superior en Informática (Énfasis en Redes y Software)
-                                <a href="#" class="cert-btn open-cert-modal" data-image="assets/IMG_1532.PNG" onclick="return false;">
-                                    <i data-feather="file-text"></i> Ver Certificado
-                                </a>
-                            </h3>
-                            <span class="institution">Centro Superior Cultural & Turismo</span>
-                        </div>
-                    </div>
-
-                    <!-- Bachiller -->
-                    <div class="timeline-item glass-panel">
-                        <div class="timeline-date">2020</div>
-                        <div class="timeline-content">
-                            <h3>
-                                Bachiller en Ciencias (Énfasis en Redes Informática)
-                                <a href="#" class="cert-btn open-cert-modal" data-image="assets/IMG_1533.PNG" onclick="return false;">
-                                    <i data-feather="file-text"></i> Ver Certificado
-                                </a>
-                            </h3>
-                            <span class="institution">Canadian International School</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Nueva Sección: Referencias Laborales -->
-            <section id="references" class="content-section fade-in">
-                <div class="glass-panel">
-                    <h2 class="section-title"><i data-feather="users"></i> Referencias Laborales</h2>
-                    <div class="references-grid">
-                        <!-- Rodolfo Arias -->
-                        <a href="https://wa.me/50688971117" target="_blank" class="ref-card glass-panel">
-                            <div class="ref-header">
-                                <div class="ref-info">
-                                    <h3>Rodolfo Arias</h3>
-                                    <span class="ref-role">Farmacia Saba</span>
-                                </div>
-                                <div class="ref-icon-box">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="ref-number">
-                                <i data-feather="phone" style="width: 14px; height: 14px;"></i>
-                                +506 8897-1117
-                                <i data-feather="arrow-right" class="ref-arrow" style="width: 16px; height: 16px;"></i>
-                            </div>
-                        </a>
-
-                        <!-- Lineth Angulo -->
-                        <a href="https://wa.me/50765581166" target="_blank" class="ref-card glass-panel">
-                            <div class="ref-header">
-                                <div class="ref-info">
-                                    <h3>Lineth Angulo</h3>
-                                    <span class="ref-role">CRS Group</span>
-                                </div>
-                                <div class="ref-icon-box">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="ref-number">
-                                <i data-feather="phone" style="width: 14px; height: 14px;"></i>
-                                +507 6558-1166
-                                <i data-feather="arrow-right" class="ref-arrow" style="width: 16px; height: 16px;"></i>
-                            </div>
-                        </a>
-
-                        <!-- Carmen Cardenas -->
-                        <a href="https://wa.me/50768469963" target="_blank" class="ref-card glass-panel">
-                            <div class="ref-header">
-                                <div class="ref-info">
-                                    <h3>Carmen Cardenas</h3>
-                                    <span class="ref-role">Referencia Personal</span>
-                                </div>
-                                <div class="ref-icon-box">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="ref-number">
-                                <i data-feather="phone" style="width: 14px; height: 14px;"></i>
-                                +507 6846-9963
-                                <i data-feather="arrow-right" class="ref-arrow" style="width: 16px; height: 16px;"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <!-- Image Modal -->
-    <div id="image-modal" class="image-modal-overlay">
-        <div class="image-modal-content">
-            <button class="image-modal-close">&times;</button>
-            <img id="modal-image-display" class="image-modal-img" src="" alt="Certificado">
-        </div>
-    </div>
-
-    <script src="js/script.js"></script>
-    <script>
-        feather.replace();
-    </script>
+<script src="js/script.js" defer></script>
 </body>
 </html>
